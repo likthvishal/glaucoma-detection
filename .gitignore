@@ -27,12 +27,11 @@ wheels/
 .ipynb_checkpoints
 *.ipynb_checkpoints
 
-# Model files (too large for git)
+# Model files (using Git LFS for .keras)
 *.h5
-*.keras
 *.tflite
 saved_model/
-checkpoints/
+# checkpoints/ - Now tracked with Git LFS
 
 # Data files (too large for git)
 *.png
