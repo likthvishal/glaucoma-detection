@@ -9,11 +9,11 @@ A state-of-the-art deep learning system for automated glaucoma detection from op
 | Feature | Original Model | Enhanced Model |
 |---------|---------------|----------------|
 | **Architecture** | MobileNetV2 (transfer learning) | Custom Medical CNN |
-| **Attention** | ❌ None | ✅ SE Blocks |
-| **Multi-scale** | ❌ No | ✅ Inception Blocks |
-| **Residual Connections** | ❌ No | ✅ Yes |
-| **Class Imbalance** | ⚠️ Not handled | ✅ Focal Loss + Weights |
-| **Interpretability** | ❌ None | ✅ Grad-CAM |
+| **Attention** | None | SE Blocks |
+| **Multi-scale** | No | Inception Blocks |
+| **Residual Connections** | No | Yes |
+| **Class Imbalance** | Not handled | Focal Loss + Weights |
+| **Interpretability** | None | Grad-CAM |
 | **Metrics** | Basic (accuracy only) | Comprehensive (10+ metrics) |
 | **Data Augmentation** | Basic | Advanced (medical-specific) |
 | **Expected Accuracy** | 85-90% | 92-96% |
@@ -162,7 +162,7 @@ FL(pt) = -α(1-pt)^γ × log(pt)
 ```
 Shows what the model "sees"
 Original Image → Heatmap → Superimposed
-     👁️      →   🔥     →      🔍
+    (eye)      → (heat)  →    (focus)
 ```
 **Impact**: Clinical validation and trust building
 
@@ -243,11 +243,11 @@ The ROC curve identifies the optimal decision threshold:
 
 ### Grad-CAM for Clinical Validation
 Ensures model focuses on:
-- ✅ Optic disc (correct)
-- ✅ Optic cup (correct)
-- ✅ Retinal nerve fiber layer (correct)
-- ❌ Image artifacts (incorrect)
-- ❌ Edges/corners (incorrect)
+- [CORRECT] Optic disc
+- [CORRECT] Optic cup
+- [CORRECT] Retinal nerve fiber layer
+- [INCORRECT] Image artifacts
+- [INCORRECT] Edges/corners
 
 ## Comparison with Original Model
 
