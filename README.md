@@ -364,19 +364,4 @@ pred = (model1.predict(img) + model2.predict(img)) / 2
 4. **ResNet** - He et al., CVPR 2016
 5. **Inception** - Szegedy et al., CVPR 2015
 
-## License
 
-For educational and research purposes only. Consult with medical professionals before clinical use.
-
-## Contact
-
-For issues or questions:
-1. Check IMPROVEMENTS.md for detailed documentation
-2. Review notebook comments and docstrings
-3. Verify all paths and configurations
-
----
-
-**Created**: 2024
-**Version**: 2.0 (Enhanced)
-**Status**: Production-Ready
