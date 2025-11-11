@@ -30,9 +30,9 @@ The app will open in your browser at `http://localhost:8501`
 
 ### Step 1: Prepare Your Repository
 Your repository must include:
-- [x] streamlit_app.py
-- [x] requirements.txt
-- [x] Trained model in checkpoints/ folder
+- streamlit_app.py
+- requirements.txt
+- Trained model in checkpoints/ folder
 
 **IMPORTANT**: The trained model files are currently in .gitignore. For deployment, you need to:
 
